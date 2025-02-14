@@ -1,6 +1,4 @@
-from http.client import HTTPException
-from multiprocessing.resource_tracker import getfd
-from typing import OrderedDict, Optional
+from typing import OrderedDict
 
 from fastapi import APIRouter, status
 from fastapi.responses import JSONResponse
@@ -43,9 +41,7 @@ async def create_book(book: Book):
     )
 
 
-@router.get(
-    "/", response_model=OrderedDict[int, Book], status_code=status.HTTP_200_OK
-)
+@router.get("/", response_model=OrderedDict[int, Book], status_code=status.HTTP_200_OK)
 async def get_books() -> OrderedDict[int, Book]:
     return db.get_books()
 
