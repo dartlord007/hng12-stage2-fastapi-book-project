@@ -16,7 +16,7 @@ jobs:
 
       # Deploy to server
       - name: Deploy to Staging Server
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v0.1.3
         with:
           host: ${{secrets.SERVER_HOST}}
           key: ${{secrets.SERVER_SSH_KEY}}
