@@ -20,7 +20,7 @@ jobs:
         with:
           host: ${{secrets.SERVER_HOST}}
           key: ${{secrets.SERVER_SSH_KEY}}
-          username: ${{secrets.SERVER_USERNAME}}
+          username: kolademodupe007
           script: |
             cd /home/ubuntu/fastapi-app
             git pull origin main
@@ -29,4 +29,3 @@ jobs:
             sudo systemctl restart fastapi
             sudo systemctl restart nginx
 
-            
