@@ -60,3 +60,4 @@ jobs:
             echo "SSH Connection Successful!"
             whoami
             ls -lah
+            
